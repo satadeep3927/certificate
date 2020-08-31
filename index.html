@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" media="screen and (max-width: 1199px" href="./assets/css/md_device.css">
+        <link rel="stylesheet" media="screen and (max-width: 991px" href="./assets/css/sm_device.css">
+        <link rel="stylesheet" media="screen and (max-width: 768px" href="./assets/css/xs_device.css">
+        <link rel="stylesheet" media="screen and (max-width: 450px" href="./assets/css/narrow_device.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+            integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+            crossorigin="anonymous"
+        ></script>
+        <title>Get Your Farewell Certificate</title>
+    </head>
+    <body>
+        <section class="dept">
+            <img src="./assets/images/Pondy_Univ_logo1.png" alt="PU Logo" id="PUlogo">
+            <h3>Get Your Farewell Certificate</h3>
+            <h1><a href="https://chempu.ac.in/" target="_blank" id="chemdept"><span style="color:rgb(189, 22, 44);font-weight: 800;">Department of</span><span style="color:rgb(8, 80, 29);font-weight: 800;"> Chemistry</span></a></h1>
+            <form id="formput">
+                <div class="form-group">
+                    <div class="col-auto my-4">
+                        <label class="sr-only" for="inlineFormInput">Name</label>
+                        <input type="text" class="form-control mx-auto mb-2" id="name" placeholder="Type Your Name" required>
+                    </div>
+                    <div class="col-auto my-4 mx-auto" id="userImage">
+                        <label class="sr-only" for="inlineFormInput">photo</label>
+                        <input type="file" class="form-control mb-2" id="profile" accept=".jpg,.png,.jpeg"onchange="previewFile()" required>
+                    </div>
+                </div>
+            </form> 
+            <button type="button" class="btn btn-primary col-3 mb-4" id="submit">Submit</button>
+        </section>       
+        <div id="container_button">
+            <button type="button" class="btn btn-primary mb-4" style="box-shadow: none;" id="preview">view</button>
+        </div>
+        <canvas id="canvas"></canvas>
+        <img id="img" style="display: none;" src="./assets/images/CERTIFICATE5.jpg"/>
+        <img id="img1" style="display: none;" src = ""/>
+        <div id="container">
+            <button type="button" class="btn btn-outline-primary mb-2" style="box-shadow: none;" id="dpdf" onclick="downloadpdf()">DOWNLOAD PDF</button>
+            <button type="button" class="btn btn-outline-primary mb-2" style="box-shadow: none;" id="djpg" onclick="downloadjpg()">DOWNLOAD JPEG</button>
+        </div>
+        <script src="./assets/js/index.js"></script>
+    </body>
+</html>
