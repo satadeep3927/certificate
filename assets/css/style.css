@@ -4,7 +4,7 @@
 } */
 @font-face {
     font-family: alex;
-    src: url('AlexBrush-Regular.ttf');
+    src: url('../font/AlexBrush-Regular.ttf');
 }
 * {
     padding: 0;
