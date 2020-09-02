@@ -49,12 +49,16 @@
             <button type="button" class="btn btn-outline-primary mb-2" style="box-shadow: none;" id="djpg" onclick="downloadjpg()">DOWNLOAD JPEG</button>
         </div>
         <script>
-            var canvas = document.getElementById('canvas'),
+$(document).ready(function(){
+$('#img').load(function(){
+var canvas = document.getElementById('canvas'),
 ctx = canvas.getContext('2d');
 canvas.width = $('#img').width();
 canvas.crossOrigin = "Anonymous";
 canvas.height = $('#img').height();
 ctx.drawImage($('#img').get(0), 0, 0);
+});
+});
 var x = $('#img1').width();
 var y = $('#img1').height();
 var ratio = x/y
