@@ -49,6 +49,15 @@
             <button type="button" class="btn btn-outline-primary mb-2" style="box-shadow: none;" id="djpg" onclick="downloadjpg()">DOWNLOAD JPEG</button>
         </div>
         <script>
+            var canvas = document.getElementById('canvas'),
+ctx = canvas.getContext('2d');
+canvas.width = $('#img').width();
+canvas.crossOrigin = "Anonymous";
+canvas.height = $('#img').height();
+ctx.drawImage($('#img').get(0), 0, 0);
+var x = $('#img1').width();
+var y = $('#img1').height();
+var ratio = x/y
             var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -67,15 +76,6 @@ reader.addEventListener("load", function () {
     reader.readAsDataURL(file);
     }
 }
-var canvas = document.getElementById('canvas'),
-ctx = canvas.getContext('2d');
-canvas.width = $('#img').width();
-canvas.crossOrigin = "Anonymous";
-canvas.height = $('#img').height();
-ctx.drawImage($('#img').get(0), 0, 0);
-var x = $('#img1').width();
-var y = $('#img1').height();
-var ratio = x/y
 $(document).on('click','#submit',function(){
     $('#preview').css('display','inline-block');
     //redraw image
