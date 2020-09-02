@@ -43,22 +43,20 @@
         </div>
         <canvas id="canvas"></canvas>
         <img id="img" style="display: none;" src="./assets/images/CERTIFICATE5.jpg"/>
-        <img id="img1" style="display: none;" src = ""/>
+        <img id="img1" style="display: none;" onload='draw()' src = ""/>
         <div id="container">
             <button type="button" class="btn btn-outline-primary mb-2" style="box-shadow: none;" id="dpdf" onclick="downloadpdf()">DOWNLOAD PDF</button>
             <button type="button" class="btn btn-outline-primary mb-2" style="box-shadow: none;" id="djpg" onclick="downloadjpg()">DOWNLOAD JPEG</button>
         </div>
         <script>
-$(document).ready(function(){
-$('#img').load(function(){
+function draw(){
 var canvas = document.getElementById('canvas'),
 ctx = canvas.getContext('2d');
 canvas.width = $('#img').width();
 canvas.crossOrigin = "Anonymous";
 canvas.height = $('#img').height();
 ctx.drawImage($('#img').get(0), 0, 0);
-});
-});
+};
 var x = $('#img1').width();
 var y = $('#img1').height();
 var ratio = x/y
